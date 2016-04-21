@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJ4-DP-Tzw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Click me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJ4-DP-Tzw">
                                 <rect key="frame" x="231" y="293" width="138" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="138" id="xac-OU-Ca6"/>
@@ -26,6 +26,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="xac-OU-Ca6"/>
+                                    </mask>
+                                </variation>
                             </label>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="left" translatesAutoresizingMaskIntoConstraints="NO" id="PNL-wf-tCe">
                                 <rect key="frame" x="50" y="50" width="500" height="520"/>
@@ -34,6 +39,7 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="SJ4-DP-Tzw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2rW-r6-h9a"/>
                             <constraint firstItem="PNL-wf-tCe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="Ab1-At-IQs"/>
                             <constraint firstItem="SJ4-DP-Tzw" firstAttribute="centerY" secondItem="PNL-wf-tCe" secondAttribute="centerY" id="Do2-t6-Uv5"/>
                             <constraint firstItem="PNL-wf-tCe" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="-30" id="FQ7-bn-I2V"/>
@@ -41,7 +47,15 @@
                             <constraint firstAttribute="bottom" secondItem="PNL-wf-tCe" secondAttribute="bottom" constant="30" id="ltu-LO-XcY"/>
                             <constraint firstItem="SJ4-DP-Tzw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="273" id="qoN-NL-nlh"/>
                             <constraint firstItem="SJ4-DP-Tzw" firstAttribute="centerX" secondItem="PNL-wf-tCe" secondAttribute="centerX" id="ucU-8j-Bwy"/>
+                            <constraint firstItem="SJ4-DP-Tzw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vhN-5w-nco"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Do2-t6-Uv5"/>
+                                <exclude reference="qoN-NL-nlh"/>
+                                <exclude reference="ucU-8j-Bwy"/>
+                            </mask>
+                        </variation>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Fcq-Xz-6Ft" appends="YES" id="Kua-3C-Vdb"/>
                         </connections>
