@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var imgLogo: UIImageView!
     @IBOutlet weak var imgArrow: UIImageView!
     var isReady: Bool = true
     
@@ -52,7 +51,6 @@ class ViewController: UIViewController {
     func changeStatus() {
         isReady = !isReady
         imgArrow.hidden = isReady
-        imgLogo.hidden = !isReady
     }
     
 }
